@@ -1,0 +1,54 @@
+﻿@model DEPI_MVC.Models.Contact
+
+@{
+    Layout = "_Layout";
+}
+
+<!-- Contact Us Section -->
+<section id="contact" class="p-5 bg-light">
+    <div class="container">
+        <h2 class="text-center text-primary mb-4">Contact Me</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Get in Touch</h5>
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Contact Details</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-telephone-fill"></i> <strong>Phone:</strong> @Model.PhoneNumber
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-envelope-fill"></i> <strong>Email:</strong> @Model.Email
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-linkedin"></i> <strong>LinkedIn:</strong> <a href="@Model.LinkedIn" target="_blank">Ammar Yasser</a>
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-github"></i> <strong>GitHub:</strong> <a href="@Model.GitHub" target="_blank">Ammar-Yasser8</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

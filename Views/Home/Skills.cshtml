@@ -1,0 +1,28 @@
+﻿@using DEPI_MVC.Models
+@model IEnumerable<Skills>
+
+@{
+    Layout = "_Layout";
+}
+
+<!-- Skills Section with Cards and Images -->
+<section id="skills" class="p-5 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-4 text-primary">Skills</h2>
+        <div class="row">
+            @foreach (var skill in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center shadow-sm">
+                        <!-- Image for each skill -->
+                        <img src="@skill.Image" class="card-img-top" alt="@skill.Name" style="height: 150px; object-fit: contain;">
+                        <div class="card-body">
+                            <h5 class="card-title mt-3">@skill.Name</h5>
+                            <p class="card-text">@skill.Description</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
